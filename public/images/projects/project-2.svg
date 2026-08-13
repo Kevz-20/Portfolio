@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pathfinder Headless CMS project thumbnail">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#161320"/>
+      <stop offset="1" stop-color="#241a2e"/>
+    </linearGradient>
+    <linearGradient id="acc2" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <g opacity="0.85">
+    <rect x="140" y="160" width="380" height="90" rx="10" fill="url(#acc2)" opacity="0.22"/>
+    <rect x="140" y="270" width="620" height="60" rx="10" fill="url(#acc2)" opacity="0.16"/>
+    <rect x="140" y="350" width="500" height="60" rx="10" fill="url(#acc2)" opacity="0.12"/>
+    <rect x="140" y="430" width="300" height="60" rx="10" fill="url(#acc2)" opacity="0.1"/>
+  </g>
+  <rect x="800" y="160" width="260" height="330" rx="14" fill="none" stroke="url(#acc2)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="800" y1="230" x2="1060" y2="230" stroke="url(#acc2)" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="930" cy="195" r="6" fill="url(#acc2)"/>
+  <circle cx="1150" cy="620" r="260" fill="url(#acc2)" opacity="0.07"/>
+</svg>

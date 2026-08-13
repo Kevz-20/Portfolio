@@ -1,0 +1,31 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aurora Analytics Dashboard project thumbnail">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#13131a"/>
+      <stop offset="1" stop-color="#1c1c2a"/>
+    </linearGradient>
+    <linearGradient id="acc1" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg1)"/>
+  <g opacity="0.5" stroke="url(#acc1)" stroke-width="1.5">
+    <path d="M120 560 L340 420 L540 500 L760 300 L980 380 L1080 220"/>
+  </g>
+  <g opacity="0.9" fill="url(#acc1)">
+    <circle cx="120" cy="560" r="7"/>
+    <circle cx="340" cy="420" r="7"/>
+    <circle cx="540" cy="500" r="7"/>
+    <circle cx="760" cy="300" r="7"/>
+    <circle cx="980" cy="380" r="7"/>
+    <circle cx="1080" cy="220" r="7"/>
+  </g>
+  <g opacity="0.18">
+    <rect x="120" y="600" width="90" height="120" rx="6" fill="url(#acc1)"/>
+    <rect x="230" y="560" width="90" height="160" rx="6" fill="url(#acc1)"/>
+    <rect x="340" y="640" width="90" height="80" rx="6" fill="url(#acc1)"/>
+    <rect x="450" y="520" width="90" height="200" rx="6" fill="url(#acc1)"/>
+  </g>
+  <circle cx="1000" cy="180" r="220" fill="url(#acc1)" opacity="0.08"/>
+</svg>
