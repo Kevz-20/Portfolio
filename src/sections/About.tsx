@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { FiDownload, FiMapPin } from "react-icons/fi";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeIn from "@/components/motion/FadeIn";
+import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 import { SITE } from "@/lib/data";
 
 export default function About() {
@@ -16,16 +16,11 @@ export default function About() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,320px)_1fr] lg:items-start">
           <FadeIn delay={0.1} className="mx-auto w-full max-w-xs lg:mx-0">
-            <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-surface">
-              <Image
-                src="/images/profile.svg"
-                alt={`Portrait of ${SITE.name}`}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 320px, 256px"
-                priority={false}
-              />
-            </div>
+            <AnimatedAvatar
+              src="/images/profile.jpg"
+              alt={`Portrait of ${SITE.name}`}
+              size={288}
+            />
           </FadeIn>
 
           <FadeIn delay={0.2} className="space-y-5">
