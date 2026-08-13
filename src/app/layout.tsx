@@ -18,11 +18,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.role}`,
   description: SITE.tagline,
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://kevin-rey-mejares.vercel.app"),
   openGraph: {
     title: `${SITE.name} — ${SITE.role}`,
     description: SITE.tagline,
+    siteName: SITE.name,
+    url: "/",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.role}`,
+    description: SITE.tagline,
   },
 };
 
