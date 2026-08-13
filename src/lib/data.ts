@@ -41,8 +41,9 @@ export const SITE = {
   email: "kevinmejares20@gmail.com",
   resumeUrl: "/resume.pdf",
   bio: [
-    "I'm a full-stack engineer who loves turning ambiguous ideas into polished, production-ready products. Over the past several years I've worked across the stack — from crafting pixel-perfect, accessible interfaces to designing resilient APIs and data models.",
-    "I care most about the details that make software feel effortless: thoughtful motion, fast load times, and interfaces that get out of the user's way. When I'm not shipping code, I'm usually exploring new design systems, contributing to open source, or hiking somewhere with terrible cell signal.",
+    "I'm a junior full-stack developer who builds mobile and web applications from the ground up — from the first line of code to a live product in someone's hands. My first real deployment was a mobile app I built and shipped for my own business, which pushed me to learn the full lifecycle of a product: planning features, designing the interface, writing the backend, and actually getting it into production rather than leaving it as a side project.",
+    "From there, I expanded that same business into a cross-platform experience, building a companion web app alongside the mobile app so customers could reach it however was easiest for them. That project taught me a lot about sharing logic and design across platforms without compromising the experience on either one.",
+    "Right now I'm especially interested in e-commerce — building online shop websites that help small businesses like mine sell online without needing a big technical team behind them. I'm still early in my career, but I care a lot about writing clean, maintainable code and shipping things that actually work for the people using them, and I'm always looking for the next project to learn from.",
   ],
 } as const;
 
