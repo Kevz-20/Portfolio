@@ -32,13 +32,13 @@ import {
  */
 
 export const SITE = {
-  name: "Jordan Blake",
-  initials: "JB",
-  role: "Full-Stack Software Engineer",
+  name: "Kevin Rey Mejares",
+  initials: "KRM",
+  role: "Full-Stack Developer | Mobile & Web Application Developer",
   tagline:
-    "I design and build fast, accessible, and delightful web experiences — from pixel to production.",
-  location: "Remote · San Francisco, CA",
-  email: "hello@jordanblake.dev",
+    "I design and build fast, accessible, and delightful mobile and web experiences — from pixel to production.",
+  location: "Remote · Philippines",
+  email: "kevinmejares20@gmail.com",
   resumeUrl: "/resume.pdf",
   bio: [
     "I'm a full-stack engineer who loves turning ambiguous ideas into polished, production-ready products. Over the past several years I've worked across the stack — from crafting pixel-perfect, accessible interfaces to designing resilient APIs and data models.",
