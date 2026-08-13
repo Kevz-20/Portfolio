@@ -64,7 +64,7 @@ export type SocialLink = {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/yourusername", icon: FiGithub },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: FiLinkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kevin-rey-mejares-0744b3423/", icon: FiLinkedin },
   { label: "Email", href: `mailto:${SITE.email}`, icon: FiMail },
   { label: "Twitter", href: "https://twitter.com/yourusername", icon: FiTwitter },
 ];
