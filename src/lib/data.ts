@@ -179,59 +179,25 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     id: "exp-1",
     type: "work",
-    role: "Senior Software Engineer",
-    org: "Northwind Labs",
+    role: "Team Leader",
+    org: 'E.M.P.O.W.E.R — Android Mobile Application',
     period: "2023 — Present",
-    location: "Remote",
+    location: "Cebu, PH",
     description:
-      "Leading front-end architecture for a suite of internal analytics products used by 200+ teams.",
+      "A digital tool designed to assist Department of Social Welfare and Development – Sustainable Livelihood Program (DSWD-SLP) participants in managing their micro-enterprises through basic accounting and bookkeeping.",
     bullets: [
-      "Rebuilt the core dashboard in Next.js, cutting median load time by 45%",
-      "Designed a shared component library adopted across 6 product teams",
-      "Mentored 3 junior engineers through structured pairing and code review",
+      "Led the team building an Android app for DSWD-SLP program participants",
+      "Designed core accounting and bookkeeping features tailored to micro-enterprise owners",
     ],
   },
   {
     id: "exp-2",
-    type: "work",
-    role: "Software Engineer",
-    org: "Brightloop",
-    period: "2021 — 2023",
-    location: "San Francisco, CA",
-    description:
-      "Built customer-facing features end-to-end across a Node.js/React SaaS platform.",
-    bullets: [
-      "Shipped a self-serve billing flow that reduced support tickets by 30%",
-      "Introduced automated E2E testing, catching regressions before release",
-      "Partnered with design to launch a full UI refresh in under one quarter",
-    ],
-  },
-  {
-    id: "exp-3",
-    type: "work",
-    role: "Frontend Developer",
-    org: "Studio Fenwick",
-    period: "2019 — 2021",
-    location: "Austin, TX",
-    description:
-      "Delivered marketing sites and web apps for clients ranging from startups to Fortune 500 brands.",
-    bullets: [
-      "Built 15+ responsive, accessible marketing sites from Figma designs",
-      "Introduced a component-driven workflow that halved handoff time",
-    ],
-  },
-  {
-    id: "exp-4",
     type: "education",
-    role: "B.S. in Computer Science",
-    org: "University of Texas at Austin",
-    period: "2015 — 2019",
-    location: "Austin, TX",
-    description:
-      "Focused on human-computer interaction and distributed systems.",
-    bullets: [
-      "Graduated with honors",
-      "Teaching assistant for Intro to Web Development",
-    ],
+    role: "Student",
+    org: "Cebu Technological University — Ginatilan Extension Campus",
+    period: "2023 — Present",
+    location: "Ginatilan, Cebu, PH",
+    description: "",
+    bullets: [],
   },
 ];

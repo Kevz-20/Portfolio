@@ -42,20 +42,24 @@ export default function Experience() {
                       {exp.type === "work" ? "Work" : "Education"}
                     </span>
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-                    {exp.description}
-                  </p>
-                  <ul className="mt-3 space-y-1.5">
-                    {exp.bullets.map((bullet, bi) => (
-                      <li key={bi} className="flex gap-2 text-sm text-muted">
-                        <span
-                          aria-hidden
-                          className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-muted"
-                        />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {exp.description && (
+                    <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                      {exp.description}
+                    </p>
+                  )}
+                  {exp.bullets.length > 0 && (
+                    <ul className="mt-3 space-y-1.5">
+                      {exp.bullets.map((bullet, bi) => (
+                        <li key={bi} className="flex gap-2 text-sm text-muted">
+                          <span
+                            aria-hidden
+                            className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-muted"
+                          />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </FadeIn>
               </li>
             );
