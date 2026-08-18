@@ -231,6 +231,13 @@ export type Certification = {
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    id: "cert-dswd-empower",
+    name: "Certificate of Appreciation — E.M.P.O.W.E.R. Android Mobile Application",
+    issuer: "Department of Social Welfare and Development (DSWD) — Field Office 7",
+    date: "August 2026",
+    image: "/images/certificates/dswd-empower-appreciation.jpg",
+  },
+  {
     id: "cert-ayalaland-immersion",
     name: "160-Hour Work Immersion — Technical Department",
     issuer: "AyalaLand Malls, Inc. — Ayala Center Cebu",
