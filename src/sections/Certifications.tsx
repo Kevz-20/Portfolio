@@ -50,13 +50,16 @@ export default function Certifications() {
               </div>
             );
 
+            const viewHref = cert.credentialUrl ?? cert.image;
+
             return (
               <StaggerItem key={cert.id} className="w-full sm:w-[22rem]">
-                {cert.credentialUrl ? (
+                {viewHref ? (
                   <a
-                    href={cert.credentialUrl}
+                    href={viewHref}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${cert.name} certificate (opens in a new tab)`}
                     className="flex h-full items-center gap-4 rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-border-strong"
                   >
                     {thumbnail}
