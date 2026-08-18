@@ -6,24 +6,24 @@ import {
   FiTwitter,
 } from "react-icons/fi";
 import {
+  SiFlutter,
+  SiDart,
   SiReact,
   SiNextdotjs,
-  SiTypescript,
   SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss,
   SiTailwindcss,
-  SiFramer,
-  SiNodedotjs,
-  SiExpress,
+  SiVite,
+  SiDjango,
   SiPython,
+  SiSupabase,
   SiPostgresql,
-  SiMongodb,
-  SiGraphql,
+  SiSqlite,
   SiGit,
-  SiDocker,
-  SiKubernetes,
+  SiGithubactions,
   SiVercel,
-  SiFigma,
-  SiRedis,
 } from "react-icons/si";
 
 /**
@@ -41,9 +41,9 @@ export const SITE = {
   email: "kevinmejares20@gmail.com",
   resumeUrl: "/resume.pdf",
   bio: [
-    "I'm a full-stack developer who builds mobile and web applications from the ground up — from the first line of code to a live product in someone's hands. My first real deployment was a mobile app I built and shipped for my own business, which pushed me to learn the full lifecycle of a product: planning features, designing the interface, writing the backend, and actually getting it into production rather than leaving it as a side project.",
-    "From there, I expanded that same business into a cross-platform experience, building a companion web app alongside the mobile app so customers could reach it however was easiest for them. That project taught me a lot about sharing logic and design across platforms without compromising the experience on either one.",
-    "Right now I'm especially interested in e-commerce — building online shop websites that help small businesses like mine sell online without needing a big technical team behind them. I'm still early in my career, but I care a lot about writing clean, maintainable code and shipping things that actually work for the people using them, and I'm always looking for the next project to learn from.",
+    "My first real taste of a professional technical environment came during a 160-hour Work Immersion in the Technical Department of AyalaLand Malls, Inc. at Ayala Center Cebu back in Senior High School — a small experience that gave me an early, hands-on sense of how real technical teams operate, and one that pointed me toward development as a path.",
+    "Since 2023, I've been the team lead and a full-stack mobile developer on E.M.P.O.W.E.R, an offline-first Flutter application built for DSWD's Sustainable Livelihood Program associations — community-run micro-enterprises that often operate with little to no internet access. Over the past three years I've helped design and build its inventory, sales, and financial modules, engineered a self-contained offline license-activation system using Ed25519 signatures and HMAC verification, and led the migration of our codebase to a clean, governed repository as our nine-person team scaled.",
+    "Outside of that, I build to learn: SneakerGrit is a full e-commerce storefront I built from scratch with vanilla JavaScript and a live Supabase backend — no framework, no build step — and PisoGen is a coin-operated phone-rental kiosk platform I run as my own small business, spanning a Flutter kiosk app and two React dashboards backed by a Django/Supabase API. I'm currently studying at Cebu Technological University — Ginatilan Extension Campus, and I'm always looking for the next problem worth solving.",
   ],
 } as const;
 
@@ -54,6 +54,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -75,36 +76,41 @@ export type SkillGroup = { category: string; skills: Skill[] };
 
 export const SKILLS: SkillGroup[] = [
   {
+    category: "Mobile",
+    skills: [
+      { name: "Flutter", icon: SiFlutter },
+      { name: "Dart", icon: SiDart },
+    ],
+  },
+  {
     category: "Frontend",
     skills: [
       { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
-      { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Framer Motion", icon: SiFramer },
+      { name: "Vite", icon: SiVite },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss },
     ],
   },
   {
-    category: "Backend",
+    category: "Backend & Database",
     skills: [
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express", icon: SiExpress },
+      { name: "Django", icon: SiDjango },
       { name: "Python", icon: SiPython },
+      { name: "Supabase", icon: SiSupabase },
       { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "GraphQL", icon: SiGraphql },
+      { name: "SQLite", icon: SiSqlite },
     ],
   },
   {
     category: "Tools & Platforms",
     skills: [
       { name: "Git", icon: SiGit },
-      { name: "Docker", icon: SiDocker },
-      { name: "Kubernetes", icon: SiKubernetes },
+      { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Vercel", icon: SiVercel },
-      { name: "Figma", icon: SiFigma },
-      { name: "Redis", icon: SiRedis },
     ],
   },
 ];
@@ -122,45 +128,30 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "aurora-dashboard",
-    title: "Aurora Analytics Dashboard",
+    id: "empower-dswd-slp",
+    title: "E.M.P.O.W.E.R — DSWD SLP Inventory & Association Management System",
     description:
-      "A real-time analytics dashboard with customizable widgets, live data streaming, and role-based access control for teams.",
+      "An offline-first Flutter app that lets DSWD Sustainable Livelihood Program associations manage member registration, inventory, point-of-sale, credit tracking, and full financial reporting entirely without internet access. As team lead, I helped build the inventory, sales, and financial modules and designed a self-contained offline license-activation system using Ed25519-signed QR codes and HMAC-verified codes.",
     image: "/images/projects/project-1.svg",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/aurora-dashboard",
+    tags: ["Flutter", "Dart", "Riverpod", "SQLite", "Offline-first"],
     featured: true,
   },
   {
-    id: "pathfinder-cms",
-    title: "Pathfinder Headless CMS",
+    id: "sneakergrit",
+    title: "SneakerGrit — E-Commerce Web App",
     description:
-      "A lightweight headless CMS with a drag-and-drop content builder, versioning, and a GraphQL API for front-end teams.",
+      "A responsive e-commerce storefront for footwear and bags, built as a single-page app with vanilla JavaScript and a live Supabase backend — no framework, no build step. Covers the full customer journey from browsing and filtering to a multi-step checkout, plus a complete admin back office with product, order, and inventory management.",
     image: "/images/projects/project-2.svg",
-    tags: ["React", "Node.js", "GraphQL", "MongoDB"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/pathfinder-cms",
+    tags: ["JavaScript", "Supabase", "PostgreSQL", "HTML5", "CSS3"],
     featured: true,
   },
   {
-    id: "orbit-chat",
-    title: "Orbit Realtime Chat",
+    id: "pisogen",
+    title: "PisoGen — Coin-Operated Kiosk Rental Platform",
     description:
-      "A realtime team chat app with threaded conversations, presence indicators, and end-to-end encrypted direct messages.",
+      "An end-to-end platform for running a coin-operated phone-rental kiosk business: a Flutter app on the kiosk hardware itself, plus separate Admin and Owner React dashboards for remote fleet control, license activation with device-fingerprint binding, and revenue reporting — backed by a Django/Supabase API.",
     image: "/images/projects/project-3.svg",
-    tags: ["React", "Express", "Redis", "Socket.IO"],
-    githubUrl: "https://github.com/yourusername/orbit-chat",
-  },
-  {
-    id: "lumen-shop",
-    title: "Lumen Storefront",
-    description:
-      "A composable e-commerce storefront with server-rendered product pages, cart persistence, and Stripe checkout.",
-    image: "/images/projects/project-4.svg",
-    tags: ["Next.js", "Stripe", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourusername/lumen-shop",
+    tags: ["Flutter", "React", "Vite", "Django", "Supabase"],
   },
 ];
 
@@ -177,21 +168,22 @@ export type ExperienceItem = {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    id: "exp-1",
+    id: "exp-empower",
     type: "work",
-    role: "Team Leader",
-    org: 'E.M.P.O.W.E.R — Android Mobile Application',
+    role: "Team Lead & Full-Stack Mobile Developer",
+    org: "E.M.P.O.W.E.R — DSWD SLP Inventory & Association Management System",
     period: "2023 — Present",
     location: "Cebu, PH",
     description:
-      "A digital tool designed to assist Department of Social Welfare and Development – Sustainable Livelihood Program (DSWD-SLP) participants in managing their micro-enterprises through basic accounting and bookkeeping.",
+      "Leading a nine-person team building an offline-first Flutter app that DSWD Sustainable Livelihood Program associations use to manage inventory, sales, credit, and financial reporting without relying on internet access.",
     bullets: [
-      "Led the team building an Android app for DSWD-SLP program participants",
-      "Designed core accounting and bookkeeping features tailored to micro-enterprise owners",
+      "Contributed across inventory, sales, and financial modules of the app",
+      "Designed and implemented an offline license-activation system using Ed25519 signatures and HMAC verification",
+      "Led the migration of the codebase to a clean, governed repository as the team scaled",
     ],
   },
   {
-    id: "exp-2",
+    id: "exp-ctu",
     type: "education",
     role: "Student",
     org: "Cebu Technological University — Ginatilan Extension Campus",
@@ -199,5 +191,50 @@ export const EXPERIENCE: ExperienceItem[] = [
     location: "Ginatilan, Cebu, PH",
     description: "",
     bullets: [],
+  },
+  {
+    id: "exp-pisogen",
+    type: "work",
+    role: "Founder & Developer",
+    org: "PisoGen — Coin-Operated Kiosk Rental Platform",
+    period: "2024 — 2025",
+    location: "Cebu, PH",
+    description:
+      "Built and ran an end-to-end platform for a coin-operated phone-rental kiosk business — a Flutter app running on the kiosk hardware itself, plus separate Admin and Owner React dashboards for remote fleet management.",
+    bullets: [
+      "Built the kiosk-side Flutter app alongside Admin and Owner React dashboards",
+      "Designed a license-activation system with device-fingerprint binding to prevent license sharing across kiosks",
+      "Migrated the backend from Django REST Framework to Supabase Edge Functions without a full client rewrite",
+    ],
+  },
+  {
+    id: "exp-ayalaland",
+    type: "work",
+    role: "Work Immersion Trainee",
+    org: "AyalaLand Malls, Inc. — Ayala Center Cebu (Technical Department)",
+    period: "Nov 2019",
+    location: "Cebu City, PH",
+    description:
+      "Completed a 160-hour Work Immersion in the Technical Department as part of Senior High School at Talamban National High School — early hands-on exposure to a real technical operations environment.",
+    bullets: [],
+  },
+];
+
+export type Certification = {
+  id: string;
+  name: string;
+  issuer: string;
+  date: string;
+  image?: string;
+  credentialUrl?: string;
+};
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: "cert-ayalaland-immersion",
+    name: "160-Hour Work Immersion — Technical Department",
+    issuer: "AyalaLand Malls, Inc. — Ayala Center Cebu",
+    date: "December 2019",
+    image: "/images/certificates/ayalaland-work-immersion.jpg",
   },
 ];
