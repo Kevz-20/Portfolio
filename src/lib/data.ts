@@ -8,16 +8,7 @@ import {
 import {
   SiFlutter,
   SiDart,
-  SiReact,
-  SiNextdotjs,
   SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiCss,
-  SiTailwindcss,
-  SiVite,
-  SiDjango,
-  SiPython,
   SiSupabase,
   SiPostgresql,
   SiSqlite,
@@ -85,21 +76,12 @@ export const SKILLS: SkillGroup[] = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
       { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Vite", icon: SiVite },
-      { name: "HTML5", icon: SiHtml5 },
-      { name: "CSS3", icon: SiCss },
     ],
   },
   {
     category: "Backend & Database",
     skills: [
-      { name: "Django", icon: SiDjango },
-      { name: "Python", icon: SiPython },
       { name: "Supabase", icon: SiSupabase },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "SQLite", icon: SiSqlite },
