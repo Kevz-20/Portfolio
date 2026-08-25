@@ -3,7 +3,7 @@ import {
   FiGithub,
   FiLinkedin,
   FiMail,
-  FiTwitter,
+  FiFacebook,
 } from "react-icons/fi";
 import {
   SiFlutter,
@@ -59,7 +59,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/yourusername", icon: FiGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kevin-rey-mejares-0744b3423/", icon: FiLinkedin },
   { label: "Email", href: `mailto:${SITE.email}`, icon: FiMail },
-  { label: "Twitter", href: "https://twitter.com/yourusername", icon: FiTwitter },
+  { label: "Facebook", href: "https://www.facebook.com/kevinmejares112001", icon: FiFacebook },
 ];
 
 export type Skill = { name: string; icon: IconType };
