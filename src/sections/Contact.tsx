@@ -8,7 +8,9 @@ import FadeIn from "@/components/motion/FadeIn";
 import { SITE, SOCIAL_LINKS } from "@/lib/data";
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   function handleChange(
@@ -18,14 +20,21 @@ export default function Contact() {
     setForm((f) => ({ ...f, [name]: value }));
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
-    const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name} (${form.email})`
-    );
-    window.location.href = `mailto:${SITE.email}?subject=${subject}&body=${body}`;
-    setStatus("sent");
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -136,16 +145,19 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
+                disabled={status === "sending"}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:scale-[1.02]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:scale-[1.02] disabled:opacity-60"
               >
-                <FiSend aria-hidden /> Send Message
+                <FiSend aria-hidden />{" "}
+                {status === "sending" ? "Sending..." : "Send Message"}
               </motion.button>
 
               <p role="status" aria-live="polite" className="min-h-5 text-sm text-muted">
-                {status === "sent"
-                  ? "Your email client should be opening now — thanks for reaching out!"
-                  : ""}
+                {status === "sent" &&
+                  "Thanks for reaching out — I'll get back to you soon!"}
+                {status === "error" &&
+                  "Something went wrong. Please try again or email me directly."}
               </p>
             </form>
           </FadeIn>
